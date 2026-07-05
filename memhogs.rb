@@ -5,21 +5,21 @@
 class Memhogs < Formula
   desc "Apps and services by memory use, grouped by process tree."
   homepage "https://github.com/cicerothoma/memhogs"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cicerothoma/memhogs/releases/download/v0.2.0/memhogs_0.2.0_darwin_amd64.tar.gz"
-      sha256 "1ff81aa8a9c3c863927ff28bb629bafb248613f5c3d03d99f8957cf3f8245d06"
+      url "https://github.com/cicerothoma/memhogs/releases/download/v0.3.0/memhogs_0.3.0_darwin_amd64.tar.gz"
+      sha256 "5a1b066cf3e528d2210b206030122cf5cb0c7469768caf7690d595adff5662ab"
 
       define_method(:install) do
         bin.install "memhogs"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cicerothoma/memhogs/releases/download/v0.2.0/memhogs_0.2.0_darwin_arm64.tar.gz"
-      sha256 "142c8ead8330ef6cc605a30488cc1fcc72ac9a11121b74a478d875fd20ecb9c9"
+      url "https://github.com/cicerothoma/memhogs/releases/download/v0.3.0/memhogs_0.3.0_darwin_arm64.tar.gz"
+      sha256 "cea15edb9c69426d28921610e44afb08dc22a2e352b358307fff5fe64ed527e4"
 
       define_method(:install) do
         bin.install "memhogs"
@@ -29,15 +29,15 @@ class Memhogs < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cicerothoma/memhogs/releases/download/v0.2.0/memhogs_0.2.0_linux_amd64.tar.gz"
-      sha256 "7f0ce54827fe5a1511c85f589afb4b78513814bd2ececb00726e72495cbf5b81"
+      url "https://github.com/cicerothoma/memhogs/releases/download/v0.3.0/memhogs_0.3.0_linux_amd64.tar.gz"
+      sha256 "1de907a9760eb27d1a09360ef7414f2c0117e7c79536f58563531613428421e6"
       define_method(:install) do
         bin.install "memhogs"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cicerothoma/memhogs/releases/download/v0.2.0/memhogs_0.2.0_linux_arm64.tar.gz"
-      sha256 "828921185eb69033dd36c2be8a3914a6f08e9f9282cceea92c4ebc4ab9a4f046"
+      url "https://github.com/cicerothoma/memhogs/releases/download/v0.3.0/memhogs_0.3.0_linux_arm64.tar.gz"
+      sha256 "cd221dd9cbe0a0c9ea503eaefa3dd1b2ce3b45d62196f9073326f278e4dbc5c6"
       define_method(:install) do
         bin.install "memhogs"
       end
